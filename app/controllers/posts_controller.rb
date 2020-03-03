@@ -31,6 +31,18 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
     end
 
+    def update 
+        @post = Post.find(params[:id])
+        if @post.valid? 
+            @post.update(post_params) 
+            redirect_to @post
+        else 
+            flash[:messages] = @post.errors.full_messages
+            render :new 
+        end
+
+    end
+
     
 
     private 

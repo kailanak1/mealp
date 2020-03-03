@@ -8,7 +8,6 @@ POSTS SHOW
 
 <ul>
 <li><%=@post.category%></li>
-
 <li><%=link_to @post.user.name, user_path(@post.user_id)%></li>
-
+<li><%=link_to "Edit", edit_post_path(@post)%></li>
 </ul>
