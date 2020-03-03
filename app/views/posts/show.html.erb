@@ -1,6 +1,8 @@
 POSTS SHOW
 
-<%=@post.title%>
+<h1><%=@post.title%></h1>
+
+<%=@post.pic%>
 
 <%=@post.summary%>
 
@@ -8,7 +10,7 @@ POSTS SHOW
 <%=@post.category%>
 
 
-<%=@post.pic%>
 
 
-<%=@post.user_id%>
+
+<%=link_to current_user.name, user_path(@post.user_id)%>
