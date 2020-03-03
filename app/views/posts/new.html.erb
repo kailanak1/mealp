@@ -1,0 +1,15 @@
+NEW POST 
+
+<%= form_for @post do |f|%>
+<%= f.label :title%>
+<%= f.text_field :title%>
+
+<%=f.label :summary%>
+<%= f.text_area :summary%>
+
+<%=f.label :pic%>
+<%=f.file_field :pic%>
+
+
+
+<%end%>

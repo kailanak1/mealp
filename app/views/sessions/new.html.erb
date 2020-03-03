@@ -1,0 +1,15 @@
+<header class = "header">
+Login to Mealp
+<%= form_tag(sessions_path) do%>
+<%= text_field_tag :name, '', :placeholder => "Login with your username"%>
+
+<input type="submit">
+<%end%>
+
+
+<%if flash[:messages]%>
+<%=flash[:messages]%>
+<%end%>
+
+<footer class = "footer">
+</footer>
