@@ -2,7 +2,7 @@
 Login to Mealp
 <%= form_tag(sessions_path) do%>
 <%= text_field_tag :name, '', :placeholder => "Login with your username"%>
-
+<%= password_field_tag :password, '', :placeholder => "Login with your password"%>
 <input type="submit">
 <%end%>
 

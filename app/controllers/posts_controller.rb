@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-    before_action :authentication_required
+    #before_action :authentication_required
 
 
     def index 
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     end
 
     def show 
-        @post = Post.find(post_params[:id])
+        @post = Post.find(params[:id])
     end
 
     def new 
@@ -17,17 +17,18 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = Post.new
+        @post = Post.new(post_params)
         if @post.valid? 
             @post.save 
             redirect_to @post
         else 
+            flash[:messages] = @post.errors.full_messages
             render :new 
         end
     end
 
     def edit 
-        @post = Post.find(post_params[:id])
+        @post = Post.find(params[:id])
     end
 
     
