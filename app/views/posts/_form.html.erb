@@ -1,0 +1,27 @@
+
+<%= form_for @post do |f|%>
+<%= f.label :title%>
+<%= f.text_field :title%>
+
+<%=f.label :summary%>
+<%= f.text_area :summary, size: "30 x 10"%>
+
+<%=f.label :category%>
+<%= f.select :category, ['Plan to checkout', 'Checked out', 'Not interested']%>
+
+<%=f.label :pic%>
+<%=f.file_field :pic%>
+
+<%=f.label :user_id%>
+<%=f.collection_select :user_id, User.all, :id, :name%>
+
+
+<%=f.submit%>
+
+
+
+<%end%>
+
+<%if flash[:messages]%>
+<%=flash[:messages]%>
+<%end%>

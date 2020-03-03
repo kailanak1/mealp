@@ -6,11 +6,9 @@ POSTS SHOW
 
 <%=@post.summary%>
 
+<ul>
+<li><%=@post.category%></li>
 
-<%=@post.category%>
+<li><%=link_to @post.user.name, user_path(@post.user_id)%></li>
 
-
-
-
-
-<%=link_to current_user.name, user_path(@post.user_id)%>
+</ul>
