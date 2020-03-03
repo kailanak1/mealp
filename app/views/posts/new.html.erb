@@ -13,8 +13,9 @@ NEW POST
 <%=f.label :pic%>
 <%=f.file_field :pic%>
 
-<%f.label :user_id%>
+<%=f.label :user_id%>
 <%=f.collection_select :user_id, User.all, :id, :name%>
+
 
 <%=f.submit%>
 

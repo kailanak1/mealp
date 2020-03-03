@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :tags
   resources :posts
   resources :users
+  
   get '/login' => "sessions#new"
   post '/sessions' => "sessions#create"
   post '/sessions' => 'sessions#destroy'

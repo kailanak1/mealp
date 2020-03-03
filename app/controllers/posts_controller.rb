@@ -1,15 +1,15 @@
 class PostsController < ApplicationController
 
-    #before_action :authentication_required
+    before_action :authentication_required
 
 
     def index 
         @posts = Post.all 
-        @post = Post.new 
     end
 
     def show 
         @post = Post.find(params[:id])
+       
     end
 
     def new 
