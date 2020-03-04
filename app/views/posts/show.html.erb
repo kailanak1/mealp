@@ -11,3 +11,16 @@ POSTS SHOW
 <li><%=link_to @post.user.name, user_path(@post.user_id)%></li>
 <li><%=link_to "Edit", edit_post_path(@post)%></li>
 </ul>
+
+<%=@post.all_tags%>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%if @user.id == session[:user_id]%>
+<%=button_to "Delete this Post", '/posts/delete', method: :delete%>
+<%end%>

@@ -41,6 +41,7 @@ class UsersController < ApplicationController
     end
 
     def destroy 
+        byebug
         @user = User.find(session[:user_id])
         @user.destroy 
         redirect_to '/login'

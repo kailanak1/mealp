@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
     def show 
         @post = Post.find(params[:id])
-       
+        @user = current_user
     end
 
     def new 
@@ -41,6 +41,12 @@ class PostsController < ApplicationController
             render :new 
         end
 
+    end
+
+    def destroy 
+        @post = Post.find(params[:id])
+        @post.destroy 
+        redirect_to posts_path
     end
 
     
