@@ -6,3 +6,6 @@
 <%end%>
 
 <%=link_to "Edit my info", edit_user_path(@user)%>
+<%if @user.id == session[:user_id]%>
+<%=button_to "Delete my account", '/users/delete', method: :delete%>
+<%end%>
