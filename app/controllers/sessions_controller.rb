@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
     end
 
     def create 
-
         user = User.find_by(name: params[:name])
        
         if user && user.authenticate(params[:password])
@@ -14,7 +13,6 @@ class SessionsController < ApplicationController
             flash[:messages] = 'Invalid Login'
             redirect_to login_path
         end
-       
     end
 
     def destroy 

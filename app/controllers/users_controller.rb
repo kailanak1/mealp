@@ -25,14 +25,33 @@ class UsersController < ApplicationController
     end
 
     def edit 
-        @user = User.find(user_params[:id])
+        @user = User.find(params[:id])
     end
 
-    
+    def update 
+        @user = User.find(params[:id])
+        if @user.valid? 
+            @user.update(user_params) 
+            redirect_to @user
+        else 
+            flash[:messages] = @user.errors.full_messages
+            render :new 
+        end
+
+    end
+
+    def destroy 
+        byebug
+        @user = User.find(session[:user_id])
+        @user.destroy 
+        redirect_to '/login'
+    end
 
     private 
 
     def user_params 
-        params.require(:user).permit(:name, :password)
+        params.require(:user).permit(:name, :password, :friend_id)
     end
 end
+
+#add friend_id to user_params

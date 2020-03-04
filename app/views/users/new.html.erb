@@ -2,18 +2,7 @@ USER NEW
 
 <header class = "header">
 
-<%= form_for @user do |f|%>
-<%= f.text_field :name, :class => "mealp", :placeholder => "Enter a name" %>
-<%= f.password_field :password, :class => "mealp", :placeholder => "Enter a password" %>
-
-
-<%=f.submit%>
-<%end%>
-
-
-<%if flash[:messages]%>
-<%=flash[:messages]%>
-<%end%>
+<%= render "form"%>
 
 <footer class = "footer">
 </footer>

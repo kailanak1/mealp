@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
     def show 
         @post = Post.find(params[:id])
-       
+        @user = current_user
     end
 
     def new 
@@ -31,11 +31,29 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
     end
 
+    def update 
+        @post = Post.find(params[:id])
+        if @post.valid? 
+            @post.update(post_params) 
+            redirect_to @post
+        else 
+            flash[:messages] = @post.errors.full_messages
+            render :new 
+        end
+
+    end
+
+    def destroy 
+        @post = Post.find(params[:id])
+        @post.destroy 
+        redirect_to posts_path
+    end
+
     
 
     private 
 
     def post_params 
-        params.require(:post).permit(:title, :summary, :category, :pic, :user_id, :friend_id)
+        params.require(:post).permit(:title, :summary, :category, :pic, :user_id, :friend_id, :all_tags)
     end
 end

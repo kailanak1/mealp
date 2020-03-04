@@ -1,6 +1,6 @@
 INDEX
 
-<%@posts.each do |post|%>
+<%@posts.reverse.each do |post|%>
 <%=link_to post.title, post_path(post)%>
 
 <%end%>

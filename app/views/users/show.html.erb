@@ -1,7 +1,17 @@
 <%=@user.name%>'s Profile
 
 
-<%@posts.each do |p|%>
-<%=link_to p.title, post_path(p)%>
+<%@posts.each do |post|%>
+<ul><%=link_to post.title, post_path(post)%></ul>
+<%end%>
 
+<%=link_to "Edit my info", edit_user_path(@user)%>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%if @user.id == session[:user_id]%>
+<%=button_to "Delete my account", '/users/delete', method: :delete%>
 <%end%>
