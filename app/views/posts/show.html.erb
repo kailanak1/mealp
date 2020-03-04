@@ -4,12 +4,8 @@ POSTS SHOW
 <%if @post.pic.attached?%>
 <img src = "<%=url_for(@post.pic)%>">
 <%end%>
-
-
 <p> <%=@post.summary%> </p>
-
-
-<%=@post.all_tags%>
+<p><small>Tags: <%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
 
 <ul>
 <li><%=@post.category%></li>
