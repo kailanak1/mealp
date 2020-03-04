@@ -5,13 +5,12 @@
 <ul><%=link_to post.title, post_path(post)%></ul>
 <%end%>
 
+
+
+
+<%if @user.id == session[:user_id]%>
 <%=link_to "Edit my info", edit_user_path(@user)%>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<%if @user.id == session[:user_id]%>
 <%=button_to "Delete my account", '/users/delete', method: :delete%>
 <%end%>
