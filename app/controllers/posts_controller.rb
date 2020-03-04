@@ -2,9 +2,14 @@ class PostsController < ApplicationController
 
     before_action :authentication_required
 
+    #Tag feature needs work 
 
     def index 
+        # if params[:tag]
+        #     @posts = Post.tagged_with(params[:tag])
+        # else
         @posts = Post.all 
+        # end 
     end
 
     def show 

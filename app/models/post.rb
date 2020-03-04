@@ -18,4 +18,7 @@ class Post < ApplicationRecord
         self.tags.map(&:name).join(", ")
       end
       
+      def self.tagged_with(name)
+        Tag.find_by_name!(name).posts
+      end
 end

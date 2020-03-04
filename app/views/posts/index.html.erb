@@ -2,5 +2,6 @@ INDEX
 
 <%@posts.reverse.each do |post|%>
 <%=link_to post.title, post_path(post)%>
+<%#=raw tag_links(post.all_tags)%>
 
 <%end%>
