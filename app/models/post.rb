@@ -7,6 +7,8 @@ class Post < ApplicationRecord
     validates :title, presence: true
     validates :summary, presence: true
 
+    has_one_attached :pic
+
     #code provided by 
     def all_tags=(names)
         self.tags = names.split(",").map do |name|
@@ -21,4 +23,6 @@ class Post < ApplicationRecord
       def self.tagged_with(name)
         Tag.find_by_name!(name).posts
       end
+
+      #end
 end

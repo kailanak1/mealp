@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   post '/sessions' => "sessions#create"
   get '/logout' => 'sessions#destroy'
   get '/search' => 'pages#search', :as => 'search_page'
- 
+  post '/search_results' => 'tags#search_results'
+
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
