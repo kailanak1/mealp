@@ -50,6 +50,8 @@ class UsersController < ApplicationController
     private 
 
     def user_params 
-        params.require(:user).permit(:name, :password)
+        params.require(:user).permit(:name, :password, :friend_id)
     end
 end
+
+#add friend_id to user_params

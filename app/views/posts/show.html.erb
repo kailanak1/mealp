@@ -4,15 +4,19 @@ POSTS SHOW
 
 <%=@post.pic%>
 
-<%=@post.summary%>
+<p> <%=@post.summary%> </p>
+
+
+<%=@post.all_tags%>
 
 <ul>
 <li><%=@post.category%></li>
 <li><%=link_to @post.user.name, user_path(@post.user_id)%></li>
+<%if current_user == @post.user%>
 <li><%=link_to "Edit", edit_post_path(@post)%></li>
+<%end%>
 </ul>
 
-<%=@post.all_tags%>
 
 
 <br>
@@ -21,6 +25,6 @@ POSTS SHOW
 <br>
 <br>
 <br>
-<%if @user.id == session[:user_id]%>
-<%=button_to "Delete this Post", '/posts/delete', method: :delete%>
+<%if current_user == @post.user%>
+<%=button_to "Delete this Post", @post, method: :delete%>
 <%end%>
