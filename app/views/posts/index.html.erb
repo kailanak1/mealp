@@ -2,14 +2,19 @@ INDEX
 
  <div style ="text-align:left;">
 <%@posts.each do |post|%>
-<div class="post-boxy">
-<b><%=link_to post.title, post_path(post)%></b>
-<%if post.pic.attached?%>
-<p><img src = "<%=url_for(post.pic)%>"></p>
-<%end%>
-<p><%= truncate(post.summary, length: 50) %></p>
-<p><small><%= raw post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
-</div>
-<%end%>
+    <div class="box">
+        <b><%=link_to post.title, post_path(post)%></b>
+        <%if post.pic.attached?%>
+            <p><img src = "<%=url_for(post.pic)%>"></p>
+        <%end%>
+        <p><%= truncate(post.summary, length: 50) %></p>
+     <p><small><%= raw post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
+    </div>
+    <%end%>
+
+
+    <div class="selected">
+    <%=@featured_post.title%>
+    </div>
 </div>
 

@@ -23,3 +23,7 @@ Things you may want to cover:
 
 * ...
 # mealp
+
+#Acknowledgements 
+
+Nouran Mahmoud's Tutorial Tagging from Scratch in Rails

@@ -9,7 +9,9 @@ class Post < ApplicationRecord
 
     has_one_attached :pic
 
-    #code provided by 
+    acts_as_commontable
+
+    #code courtesty of Nouran Mahmoud (some edits were made)
     def all_tags=(names)
         self.tags = names.split(",").map do |name|
             Tag.where(name: name.strip).first_or_create!

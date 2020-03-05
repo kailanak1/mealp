@@ -12,9 +12,33 @@
  *
  *= require_tree .
  *= require_self
+ *= require commontator/application
  */
+
+
+
+/*=
+
+.box {
+    display: flex;
+    align-items: flex-start;
+    height: 200px;
+  }
+  .box>*:first-child {
+      align-self: stretch;
+  }
+  .box .selected {
+      align-self: right;
+  } 
+
+}
+*/
+
 .post-boxy{
     background: rgb(243, 240, 240);
     padding: 10px;
     margin: 10px;
-}
+
+       
+
+

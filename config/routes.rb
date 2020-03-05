@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/search' => 'pages#search'
   post '/search_results' => 'pages#search_results'
+  mount Commontator::Engine => '/commontator'
 
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

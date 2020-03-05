@@ -55,3 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #bcrypt
 gem 'bcrypt', '~> 3.1.7'
+
+#comment-makers and supports
+gem 'commontator'
+gem 'jquery-rails'
+gem 'sassc-rails'
