@@ -11,8 +11,8 @@ class PostsController < ApplicationController
         # else
         
         @featured_post = Post.all.reverse.first
-        @posts = Post.order("created_at desc").limit(4).offset(1)
-
+        @posts = Post.order("created_at desc").limit(10).offset(1)
+   
        
         # end 
     end

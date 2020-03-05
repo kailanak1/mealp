@@ -1,4 +1,16 @@
-INDEX
+<div class ="grid-container">
+
+
+<div style ="text-align:center">
+    <div class="featured_boxy">
+    <%=link_to @featured_post.title, post_path(@featured_post)%>
+    <%if @featured_post.pic.attached?%>
+            <p><img src = "<%=url_for(@featured_post.pic)%>"></p>
+        <%end%>
+        <p><%= truncate(@featured_post.summary, length: 100) %></p>
+     <p><small><%= @featured_post.all_tags %></small></p>
+    </div>
+</div>
 
  <div style ="text-align:left;">
 <%@posts.each do |post|%>
@@ -8,14 +20,14 @@ INDEX
             <p><img src = "<%=url_for(post.pic)%>"></p>
         <%end%>
         <p><%= truncate(post.summary, length: 50) %></p>
-     <p><small><%= raw post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
+     <p><small><%= post.all_tags %></small></p>
     </div>
     <%end%>
 </div>
 
-<div style ="text-align:right">
-    <div class="post-boxy">
-    <%=@featured_post.title%>
-    </div>
 </div>
 
+
+
+
+</div>

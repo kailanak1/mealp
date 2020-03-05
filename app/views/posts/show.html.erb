@@ -5,11 +5,10 @@ POSTS SHOW
 <img src = "<%=url_for(@post.pic)%>">
 <%end%>
 <p> <%=@post.summary%> </p>
-<p><small>Tags: <%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
 
 <p><%=@post.category%></p>
-<p><%=link_to @post.user.name, user_path(@post.user_id)%></p>
-
+<p>Post by: <%=link_to @post.user.name, user_path(@post.user_id)%></p>
+<p><small>Tags: <%=@post.all_tags %></small></p>
 <%if current_user == @post.user%>
 <li><%=link_to "Edit", edit_post_path(@post)%></li>
 <%end%>
