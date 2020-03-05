@@ -1,7 +1,9 @@
-INDEX
 
- <div style ="text-align:left;">
-<%@posts.each do |post|%>
+
+<% searched = Tag.all.find_by(name:params[:search])%>
+<h3>Search results for <%=searched.name%></h3>
+
+<%searched.posts.each do |post|%>
 <div class="post-boxy">
 <b><%=link_to post.title, post_path(post)%></b>
 <%if post.pic.attached?%>
@@ -10,6 +12,5 @@ INDEX
 <p><%= truncate(post.summary, length: 50) %></p>
 <p><small><%= raw post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
 </div>
-<%end%>
-</div>
 
+<%end%>

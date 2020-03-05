@@ -2,9 +2,18 @@ class PostsController < ApplicationController
 
     before_action :authentication_required
 
+    #Tag feature needs work 
 
     def index 
-        @posts = Post.all 
+        
+        # if params[:tag]
+        #     @posts = Post.tagged_with(params[:tag])
+        # else
+        
+        @featured_post = Post.all.reverse.first
+        @posts = Post.all
+       
+        # end 
     end
 
     def show 
@@ -17,7 +26,7 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = Post.new(post_params)
+        @post = Post.new(post_params.merge(user: current_user))
         if @post.valid? 
             @post.save 
             redirect_to @post
@@ -54,6 +63,6 @@ class PostsController < ApplicationController
     private 
 
     def post_params 
-        params.require(:post).permit(:title, :summary, :category, :pic, :user_id, :friend_id, :all_tags)
+        params.require(:post).permit(:title, :summary, :category, :pic, :friend_id, :all_tags, :tag, { tag_ids:[]}, :tag_ids)
     end
 end

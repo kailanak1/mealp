@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+    #skip_before_action :authentication_required, only [:new, :create]
+
     def new 
     end
 
@@ -16,7 +18,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy 
-        reset_session
+        reset_session 
         redirect_to login_path
     end
 end

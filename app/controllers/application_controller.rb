@@ -1,20 +1,27 @@
 class ApplicationController < ActionController::Base
 
-    def authentication_required 
-        if !logged_in? 
-            redirect_to login_path
-        end
+    #before_action :authentication_required
+  
+  
+    def current_user 
+        @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
+
 
     def logged_in?
         !!current_user
     end
 
-    def current_user 
-        @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      
+    def authentication_required 
+        unless logged_in? 
+            flash[:messages] = "You must be logged in to view this page."
+            redirect_to login_path
+        end
     end
 
-    helper_method :current_user
+    helper_method :current_user, :logged_in?
+   
 
 
 
