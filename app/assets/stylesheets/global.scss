@@ -32,24 +32,29 @@
     justify-content: space-evenly;
   }
   
+ 
 
   body { 
     padding-top: 100px; 
     font-family: Arial;
     background: #f1f1f1;
-}
+  }
 
-.feature { 
-  background-color: lightgrey;
-  width: 300px;
-  display: block;
-  border: 15px solid#d32323;
-  padding: 50px;
-  margin: 20px;
-  display: flex;
-  overflow: scroll;
-  flex-direction: row;
-}
+  .feature { 
+    background-color: lightgrey;
+    width: 300px;
+    display: block;
+    border: 15px solid#d32323;
+    padding: 50px;
+    margin: 20px;
+    display: flex;
+    overflow: scroll;
+    flex-direction: row;
+    box-align: right;
+    float: right;
+  }
+
+
 
 
 .content {
@@ -63,9 +68,9 @@
   overflow: scroll;
   flex-direction: column;
 }
-.grid-container{
-  display: grid;
-  grid-gap: 50px;
+.top-container{
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -83,6 +88,4 @@
 
 }
 
-.featured_boxy {
-  float: right;
-} 
+

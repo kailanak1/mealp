@@ -1,4 +1,4 @@
-<%=@user.name%>'s Profile
+<%=@user.name%>'s Posts
 
 
 <%@posts.each do |post|%>
@@ -9,6 +9,8 @@
 
 
 <%if @user.id == session[:user_id]%>
+<br>
+<br>
 <%=link_to "Edit my info", edit_user_path(@user)%>
 <br>
 <br>
