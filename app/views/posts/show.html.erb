@@ -7,13 +7,13 @@ POSTS SHOW
 <p> <%=@post.summary%> </p>
 <p><small>Tags: <%= raw @post.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
 
-<ul>
-<li><%=@post.category%></li>
-<li><%=link_to @post.user.name, user_path(@post.user_id)%></li>
+<p><%=@post.category%></p>
+<p><%=link_to @post.user.name, user_path(@post.user_id)%></p>
+
 <%if current_user == @post.user%>
 <li><%=link_to "Edit", edit_post_path(@post)%></li>
 <%end%>
-</ul>
+
 
 
 
