@@ -1,2 +1,6 @@
 Search Tags
 
+<%form_tag '/search_results' do%>
+<%=text_field_tag :search_term%>
+<%=submit_tag "Submit"%>
+<%end%>
