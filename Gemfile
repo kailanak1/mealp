@@ -60,3 +60,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'commontator'
 gem 'jquery-rails'
 gem 'sassc-rails'
+
+#image processing 
+gem 'image_processing', '~> 1.2'
