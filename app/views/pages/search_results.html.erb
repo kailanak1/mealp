@@ -1,6 +1,6 @@
 
-
-<% searched = Tag.all.find_by(name:params[:search])%>
+<%if Tag.all.find_by(name:params[:search]) %>
+<%searched = Tag.all.find_by(name:params[:search])%>
 <h3>Search results for <%=searched.name%></h3>
 
 <%searched.posts.each do |post|%>
@@ -13,4 +13,7 @@
 <p><small><%= post.all_tags %></small></p>
 </div>
 
+<%end%>
+<%else%>
+<%="NOPE"%>
 <%end%>
