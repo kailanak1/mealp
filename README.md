@@ -47,8 +47,7 @@ Nouran Mahmoud's Tutorial Tagging from Scratch in Rails
 Coming soon!
 
 ## Slides Presenation 
-Coming soon!
-
+https://docs.google.com/presentation/d/1MS6uzp2V9660-_37P2sD2m0ZwfPRZJIMBonHoMyEJmA/edit?usp=sharing
 ## License 
 This project is licensed under the GNU GPL (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
