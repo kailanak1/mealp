@@ -1,24 +1,32 @@
+<div class="content">
+    <%= form_for @post do |f|%>
+   
+   <%= f.label :title%>
+    <%= f.text_field :title%>
+    
+    <p> <%=f.label :summary%> </p>
+    <p><%= f.text_area :summary, size: "30 x 10"%></p>
+    
+    <p><%=f.label :category%>
+    <%= f.select :category, ['Plan to checkout', 'Checked out', 'Not interested']%></p>
 
-<%= form_for @post do |f|%>
-<%= f.label :title%>
-<%= f.text_field :title%>
-<%=f.label :summary%>
-<%= f.text_area :summary, size: "30 x 10"%>
-<%=f.label :category%>
-<%= f.select :category, ['Plan to checkout', 'Checked out', 'Not interested']%>
-<%=f.label :pic%>
-<%=f.file_field :pic%>
-<%= f.hidden_field :user_id%>
-<%=f.label :all_tags, placeholder: "one word separated by comma"%>
-<%=f.text_field :all_tags%>
+    <p><%=f.label :pic%>
+    <%=f.file_field :pic%></p>
+
+    <%= f.hidden_field :user_id%>
+
+    <p><%=f.label :all_tags, placeholder: "one word separated by comma"%>
+    <%=f.text_field :all_tags%></p>
 
 
-<%=f.submit%>
+    <%=f.submit%>
 
 
 
-<%end%>
+    <%end%>
 
-<%if flash[:messages]%>
-<%=flash[:messages]%>
-<%end%>
+    <%if flash[:messages]%>
+    <%=flash[:messages]%>
+    <%end%>
+
+</div>

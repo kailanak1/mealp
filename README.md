@@ -24,17 +24,16 @@ The user can make an account, write posts, delete and edit posts.
     - bundle install 
     - rake db:migrate
     - rails s 
+4) From your web browswer:
     - navigate to your localhost server
     - in localhost type /users/new to create an account
-    -you must make a new post BEFORE navigating the site
+    - you must make a new post BEFORE navigating the site
 
-4) Enjoy :)
+5) Enjoy :)
 
 ## Author
 Kailana Kahawaii 
 
-## Licence
-This project is licensed under the GNU GPL (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ## Contributing 
 Contributions are welcome. Submit a pull request!
@@ -51,6 +50,7 @@ Coming soon!
 Coming soon!
 
 ## License 
+This project is licensed under the GNU GPL (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
     Copyright (C) <20202>  <Kailana Kahawaii>
 

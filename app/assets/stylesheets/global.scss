@@ -42,14 +42,14 @@
 
   .feature { 
     background-color: lightgrey;
-    width: 300px;
+    font-family: Helvetica;
     display: block;
     border: 15px solid#d32323;
     padding: 50px;
     margin: 20px;
     display: flex;
     overflow: scroll;
-    flex-direction: row;
+    flex-direction: column;
     box-align: right;
     float: right;
   }
@@ -67,6 +67,7 @@
   display: flex;
   overflow: scroll;
   flex-direction: column;
+  word-wrap: break-word;
 }
 .top-container{
   display: flex;
@@ -85,6 +86,7 @@
   background: #f5f5f5;
   padding: 10px;
   margin: 10px;
+  word-wrap: break-word;
 
 }
 

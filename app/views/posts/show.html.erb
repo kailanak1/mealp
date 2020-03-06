@@ -1,27 +1,23 @@
 
-
-<h1><%=@post.title%></h1>
-<%if @post.pic.attached?%>
-<img tag src = "<%=url_for(@post.pic)%>">
-<%end%>
-<p> <%=@post.summary%> </p>
-
-<p><%=@post.category%></p>
-<p>Post by: <%=link_to @post.user.name, user_path(@post.user_id)%></p>
-<p><small>Tags: <%=@post.all_tags %></small></p>
-<%if current_user == @post.user%>
-<li><%=link_to "Edit", edit_post_path(@post)%></li>
-<%end%>
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<%if current_user == @post.user%>
-<%=button_to "Delete this Post", @post, method: :delete%>
-<%end%>
+<div class="post-boxy">
+    <h1><%=@post.title%></h1>
+        <%if @post.pic.attached?%>
+            <img tag src = "<%=url_for(@post.pic)%>">
+        <%end%>
+    <p> <%=@post.summary%> </p>
+    <p><%=@post.category%></p>
+    <p>Post by: <%=link_to @post.user.name, user_path(@post.user_id)%></p>
+    <p><small>Tags: <%=@post.all_tags %></small></p>
+        <%if current_user == @post.user%>
+        <li><%=link_to "Edit", edit_post_path(@post)%></li>
+        <%end%>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <%if current_user == @post.user%>
+            <%=button_to "Delete this Post", @post, method: :delete%>
+        <%end%>
+</div>
