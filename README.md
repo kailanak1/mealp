@@ -1,15 +1,62 @@
-# README
+# READ ME
 
-Under construction
-# mealp
 
-#Acknowledgements 
+# MEALP
+a meal-tracker app, but just for me.  
+
+## About
+Mealp helps you keep track of the places you wanted to checkout, checked out, and the places you're not interested in. You can write summaries of those places and upload photos. 
+
+## Technology Used 
+
+- Ruby on Rails
+- ActiveRecord
+
+## Features
+
+The user can make an account, write posts, delete and edit posts.
+
+## Installation 
+
+1) Clone the repo. 
+2) From your terminal, navigate to the mealp folder.  
+3) From your terminal, type:
+    - bundle install 
+    - rake db:migrate
+    - rails s 
+    - navigate to your localhost server
+    - in localhost type /users/new to create an account
+    -you must make a new post BEFORE navigating the site
+
+4) Enjoy :)
+
+## Author
+Kailana Kahawaii 
+
+## Licence
+This project is licensed under the GNU GPL (https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+## Contributing 
+Contributions are welcome. Submit a pull request!
+
+## Acknowledgements
 
 Nouran Mahmoud's Tutorial Tagging from Scratch in Rails
 
 
+<<<<<<< HEAD
 
 <one line to give the program's name and a brief idea of what it does.>
+=======
+## Video Tutorial 
+Coming soon!
+
+## Slides Presenation 
+Coming soon!
+
+## License 
+
+>>>>>>> 0b7ae5c43e7d737ce1daa209a03563a8363eb7be
     Copyright (C) <20202>  <Kailana Kahawaii>
 
     This program is free software: you can redistribute it and/or modify
@@ -23,4 +70,10 @@ Nouran Mahmoud's Tutorial Tagging from Scratch in Rails
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
+<<<<<<< HEAD
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+=======
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+>>>>>>> 0b7ae5c43e7d737ce1daa209a03563a8363eb7be
