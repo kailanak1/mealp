@@ -1,4 +1,4 @@
-#READ ME
+# READ ME
 
 
 # MEALP
@@ -9,8 +9,8 @@ Mealp helps you keep track of the places you wanted to checkout, checked out, an
 
 ## Technology Used 
 
-Ruby on Rails
-ActiveRecord
+- Ruby on Rails
+- ActiveRecord
 
 ## Features
 
@@ -26,7 +26,7 @@ The user can make an account, write posts, delete and edit posts.
     - rails s 
     - navigate to your localhost server
     -create an account
-    -you must make through new post BEFORE navigating the site
+    -you must make a new post BEFORE navigating the site
 
 4) Enjoy :)
 
@@ -50,7 +50,7 @@ Coming soon!
 ## Slides Presenation 
 Coming soon!
 
-##License 
+## License 
 
     Copyright (C) <20202>  <Kailana Kahawaii>
 
