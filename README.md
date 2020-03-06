@@ -44,7 +44,7 @@ Nouran Mahmoud's Tutorial Tagging from Scratch in Rails
 
 
 ## Video Tutorial 
-Coming soon!
+https://drive.google.com/file/d/1b2H4lXn5EnoWRdZMwCN7_SfLXGXP5zEe/view?usp=sharing
 
 ## Slides Presenation 
 https://docs.google.com/presentation/d/1MS6uzp2V9660-_37P2sD2m0ZwfPRZJIMBonHoMyEJmA/edit?usp=sharing
