@@ -13,14 +13,12 @@
         <%end%>
     </div>
 
-
-
     <div style ="text-align:center">
         <div class="feature">
-        <%=link_to @featured_post.title, post_path(@featured_post)%>
-        <%if @featured_post.pic.attached?%>
-                <p><img src = "<%=url_for(@featured_post.pic)%>"></p>
-            <%end%>
+            <%=link_to @featured_post.title, post_path(@featured_post)%>
+            <%if @featured_post.pic.attached?%>
+                 <p><img src = "<%=url_for(@featured_post.pic)%>"></p>
+             <%end%>
             <p><%= truncate(@featured_post.summary, length: 100) %></p>
         <p><small><%= @featured_post.all_tags %></small></p>
         </div>
