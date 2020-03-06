@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    
+    skip_before_action :authentication_required, only: [:new, :create]
     def index 
         @users = User.all 
     end
@@ -17,6 +17,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.valid? 
             @user.save 
+            login_user(@user)
             redirect_to @user
         else 
             flash[:messages] = @user.errors.full_messages
@@ -43,6 +44,7 @@ class UsersController < ApplicationController
     def destroy 
         @user = User.find(session[:user_id])
         @user.destroy 
+        reset_session
         redirect_to '/login'
     end
 

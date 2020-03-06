@@ -1,8 +1,8 @@
-POSTS SHOW
+
 
 <h1><%=@post.title%></h1>
 <%if @post.pic.attached?%>
-<img src = "<%=url_for(@post.pic)%>">
+<img tag src = "<%=url_for(@post.pic)%>">
 <%end%>
 <p> <%=@post.summary%> </p>
 

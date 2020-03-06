@@ -44,10 +44,6 @@ Contributions are welcome. Submit a pull request!
 Nouran Mahmoud's Tutorial Tagging from Scratch in Rails
 
 
-<<<<<<< HEAD
-
-<one line to give the program's name and a brief idea of what it does.>
-=======
 ## Video Tutorial 
 Coming soon!
 
@@ -56,7 +52,6 @@ Coming soon!
 
 ## License 
 
->>>>>>> 0b7ae5c43e7d737ce1daa209a03563a8363eb7be
     Copyright (C) <20202>  <Kailana Kahawaii>
 
     This program is free software: you can redistribute it and/or modify
@@ -70,10 +65,6 @@ Coming soon!
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-<<<<<<< HEAD
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-=======
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
->>>>>>> 0b7ae5c43e7d737ce1daa209a03563a8363eb7be
