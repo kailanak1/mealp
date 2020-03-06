@@ -25,7 +25,7 @@ The user can make an account, write posts, delete and edit posts.
     - rake db:migrate
     - rails s 
     - navigate to your localhost server
-    -create an account
+    - in localhost type /users/new to create an account
     -you must make a new post BEFORE navigating the site
 
 4) Enjoy :)
