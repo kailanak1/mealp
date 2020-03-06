@@ -2,19 +2,11 @@ class PostsController < ApplicationController
 
     before_action :authentication_required
 
-    #Tag feature needs work 
+    
 
     def index 
-        
-        # if params[:tag]
-        #     @posts = Post.tagged_with(params[:tag])
-        # else
-        
         @featured_post = Post.all.reverse.first
         @posts = Post.order("created_at desc").limit(10).offset(1)
-   
-       
-        # end 
     end
 
     def show 

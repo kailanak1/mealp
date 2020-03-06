@@ -1,16 +1,16 @@
 class SessionsController < ApplicationController
 
-    #skip_before_action :authentication_required, only [:new, :create]
+    #skip_before_action :authentication_required, only: [:new, :create]
 
     def new 
     end
 
     def create 
-        user = User.find_by(name: params[:name])
+        @user = User.find_by(name: params[:name])
        
-        if user && user.authenticate(params[:password])
-            session[:user_id] = user.id 
-            redirect_to user_path(user)
+        if @user && @user.authenticate(params[:password])
+            login_user(@user)
+            redirect_to user_path(@user)
         else 
             flash[:messages] = 'Invalid Login'
             redirect_to login_path

@@ -5,7 +5,7 @@ class User < ApplicationRecord
     has_many :follows, class_name: "Friendship", foreign_key: "friend_id"
     has_many :followers, through: :follows, source: :user 
 
-    has_many :posts 
+    has_many :posts, dependent: :destroy
 
     validates :name, presence: true
     validates :name, uniqueness: true

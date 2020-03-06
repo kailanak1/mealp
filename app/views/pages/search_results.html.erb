@@ -3,6 +3,8 @@
 <%searched = Tag.all.find_by(name:params[:search])%>
 <h3>Search results for <%=searched.name%></h3>
 
+<h5>There are <%=searched.posts.count%> results </h5>
+
 <%searched.posts.each do |post|%>
 <div class="post-boxy">
 <b><%=link_to post.title, post_path(post)%></b>
@@ -15,5 +17,5 @@
 
 <%end%>
 <%else%>
-<%="NOPE"%>
+<%="Not a valid search"%>
 <%end%>

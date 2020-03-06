@@ -11,6 +11,6 @@ class PagesController < ApplicationController
       end
 
     def search_results
-        
+        @tag = Tag.find_by(params[:id])
     end
 end
