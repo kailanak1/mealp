@@ -4,8 +4,12 @@
 <%@posts.reverse.each do |post|%>
 <ul><%=link_to post.title, post_path(post)%></ul>
 <%end%>
-
-
+Friends: 
+<ul>
+  <%@user.friends.each do |user| %>
+  <li><%=link_to user.name, user_path(user)%></li>
+  <% end %>  
+</ul>
 
 
 <%if @user.id == session[:user_id]%>
