@@ -1,0 +1,14 @@
+<div class ="top-container">
+
+    <div style ="text-align:left;">
+        <%@users.each do |user|%>
+        <div class="post-boxy">
+            <p><b><%=link_to user.name, user_path(user)%></b></p>
+            <p><%= link_to "Add Friend", friendships_path(:friend_id => user),:method => :post%></p>
+        </div>
+        <%end%>
+    </div>
+
+ 
+
+</div>
