@@ -6,7 +6,7 @@ ruby '2.6.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # use postgress for ActiveRecord 
-gem 'pg'
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -63,3 +63,4 @@ gem 'sassc-rails'
 
 #image processing 
 gem 'image_processing', '~> 1.2'
+
