@@ -62,5 +62,5 @@ gem 'jquery-rails'
 gem 'sassc-rails', '~> 2.1.0'
 
 #image processing 
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
